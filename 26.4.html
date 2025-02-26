@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Hanler</title>
+</head>
+<body>
+    <button id="make-gold">Make Gold</button>
+    <h1 id="page-title">The page head</h1>
+    <button id="update-btn">update page title</button>
+    <input type="text">
+
+
+    <script>
+        document.querySelector("#update-btn").addEventListener("click", function(){
+            const pageTitle= document.getElementById("page-title")
+            pageTitle.innerText= "The page title has been changed"
+        })
+
+        document.getElementById('make-gold').addEventListener('click', function(){
+            document.body.style.backgroundColor= "gold"
+        })
+    </script>
+</body>
+</html>
