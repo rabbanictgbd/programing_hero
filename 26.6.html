@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Hanler</title>
+</head>
+
+<body>
+    <br><br><br>
+    <button id="color-1">color-1</button>
+    <button id="color-2">color-2</button>
+    <button id="color-3">color-3</button>
+    <button id="color-4">color-4</button>
+    <button id="color-5">color-5</button>
+    <button id="color-6">color-6</button>
+    <button id="color-7">color-7</button>
+    <button id="color-8">color-8</button>
+    <button id="color-9">color-9</button>
+    <button id="color-10">color-10</button>
+
+<script>
+    document.getElementById("color-1").addEventListener("click", function(){
+        document.body.style.backgroundColor= "yellow"
+    })
+    // question onclick is not working.................
+    document.getElementById("color-2").addEventListener("onclick", function(){
+        document.body.style.backgroundColor= "red"
+    })
+     // question ondblclick is not working.................
+    document.getElementById("color-3").addEventListener("ondblclick", function(){
+        document.body.style.backgroundColor= "red"
+    })
+    document.getElementById("color-4").addEventListener("mouseout", function(){
+        document.body.style.backgroundColor= "red"
+    })
+    document.getElementById("color-5").addEventListener("mousedown", function(){
+        document.body.style.backgroundColor= "red"
+    })
+    document.getElementById("color-6").addEventListener("mouseup", function(){
+        document.body.style.backgroundColor= "red"
+    })
+    document.getElementById("color-7").addEventListener("mousemove", function(){
+        document.body.style.backgroundColor= "red"
+    })
+    document.getElementById("color-8").addEventListener("mouseover", function(){
+        document.body.style.backgroundColor= "green"
+    })
+</script>
+</body>
+
+</html>
