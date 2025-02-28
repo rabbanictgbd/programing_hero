@@ -19,6 +19,12 @@
     <button id="color-8">color-8</button>
     <button id="color-9">color-9</button>
     <button id="color-10">color-10</button>
+<br><br>
+<h1 id="secret">secret items</h1>
+    <input id="input-name" placeholder="Type name" type="text">
+    <input id="input-email" placeholder="Type email" type="email">
+    <input id="input-delete" placeholder="Type 'delete' exactly " type="text">
+    <button id="btn-delete" disabled>Delete</button>
 
 <script>
     document.getElementById("color-1").addEventListener("click", function(){
@@ -46,6 +52,30 @@
     })
     document.getElementById("color-8").addEventListener("mouseover", function(){
         document.body.style.backgroundColor= "green"
+    })
+    document.getElementById("input-name").addEventListener("focus", function(){
+        console.log("user is typing name")
+        document.body.style.backgroundColor= "green"
+    })
+    document.getElementById("input-email").addEventListener("focus", function(){
+        console.log("user is typing email")
+        document.body.style.backgroundColor= "green"
+    })
+    document.getElementById("input-delete").addEventListener("keyup", function(){
+        const text= event.target.value
+        const btnDelete= document.getElementById("btn-delete")
+        const secret=document.getElementById("secret")
+        
+        console.log("user is typing", text)
+        if(text==='delete'){
+            console.log("typed delete");
+            btnDelete.removeAttribute("disabled");
+            secret.style.display= "none";
+        } else {
+            console.log("something else")
+            btnDelete.setAttribute("disabled", true)
+        }
+        document.body.style.backgroundColor= "orange"
     })
 </script>
 </body>
