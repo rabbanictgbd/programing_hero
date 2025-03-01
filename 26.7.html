@@ -28,34 +28,55 @@
     </style>
 </head>
 
-<body>
+<body id="body">
     <section id="section">
         <h1>Section head</h1>
-        <div>
+        <div id="division-head">
             <h1> div head</h1>
             <ol id="order-list">
                 <h1> list head</h1>
 
-                <li id="itme-1">Item-1</li>
-                <li id="itme-2">Item-2</li>
-                <li id="itme-3">Item-3</li>
-                <li id="itme-4">Item-4</li>
-                <li id="itme-5">Item-5</li>
-                <li id="itme-6">Item-6</li>
+                <li id="item-1">Item-1</li>
+                <li id="item-2">Item-2</li>
+                <li id="item-3">Item-3</li>
+                <li id="item-4">Item-4</li>
+                <li id="item-5">Item-5</li>
+                <li id="item-6">Item-6</li>
             </ol>
         </div>
     </section>
 
     <script>
-        // document.getElementById("item-2").addEventListener("click", function () {
-        //         console.log("clicked on item 2");
-        //     })
+         // question error item-2 code.............................
+// solved.......id input mistake
+       
+document.getElementById("item-2").addEventListener("click", function (event) {
+        console.log("clicked on item 2");
+       event.stopImmediatePropagation() 
+    }) 
+        document.getElementById("item-2").addEventListener("click", function (event) {
+                console.log("clicked on item 2 second");
+               event.stopPropagation() 
+            })
+        document.getElementById("item-2").addEventListener("click", function (event) {
+                console.log("clicked on item 2 third");
+               event.stopPropagation() 
+            })
+        document.getElementById("order-list").addEventListener("click", function () {
+                console.log("clicked on order-list");
+            })
+        document.getElementById("division-head").addEventListener("click", function () {
+                console.log("clicked on division-head");
+            })
+        document.getElementById("section").addEventListener("click", function () {
+                console.log("clicked on section");
+            })
+        document.getElementById("body").addEventListener("click", function () {
+                console.log("clicked on body");
+            })
 
-        // question error up & down code.............................
+       
 
-        // document.getElementById('item-2').addEventListener('click', function(){
-        //     console.log("item 2 clicked")
-        // })
     </script>
 </body>
 
