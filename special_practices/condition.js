@@ -104,3 +104,9 @@ console.log(currentDate)
 
 let myBirthDate = new Date(1995, 5, 6) //timezone
 console.log(myBirthDate)
+
+// <!-- default function value -->
+function sum(a=0,b=0){
+    return a+b
+}
+console.log(sum(10,50))
